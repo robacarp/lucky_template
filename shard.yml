@@ -1,0 +1,48 @@
+name: my_lucky_app
+version: 0.1.0
+
+targets:
+  my_lucky_app:
+    main: src/my_lucky_app.cr
+
+crystal: 1.3.2
+
+dependencies:
+  breeze:
+    github: luckyframework/breeze
+    version: ~> 0.2
+
+  carbon:
+    github: luckyframework/carbon
+    version: ~> 0.2.0
+
+  carbon_sendgrid_adapter:
+    github: luckyframework/carbon_sendgrid_adapter
+    version: ~> 0.2.0
+
+  honeybadger:
+    github: honeybadger-io/honeybadger-crystal
+
+  lucky:
+    github: luckyframework/lucky
+    version: ~> 0.29.0
+
+  lucky_env:
+    github: luckyframework/lucky_env
+    version: ~> 0.1.4
+
+  lucky_task:
+    github: luckyframework/lucky_task
+    version: ~> 0.1.1
+
+  mosquito:
+    github: mosquito-cr/mosquito
+    version: ~> 1.0.0.rc1
+
+  pundit:
+    github: stephendolan/pundit
+
+development_dependencies:
+  lucky_flow:
+    github: luckyframework/lucky_flow
+    version: ~> 0.7.3

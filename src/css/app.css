@@ -1,0 +1,8 @@
+@import "components/forms.css";
+@import "components/nav.css";
+@import "components/sudo.css";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

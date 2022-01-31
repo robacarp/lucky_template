@@ -1,0 +1,26 @@
+{
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@rails/ujs": "^6.0.0",
+    "modern-normalize": "^1.1.0",
+    "turbolinks": "^5.2.0",
+    "@tailwindcss/typography": "^0.5"
+  },
+  "scripts": {
+    "watch": "tailwindcss --postcss --watch --input=src/css/app.css --output=public/css/app.css",
+    "prod": "tailwindcss --postcss --input=src/css/app.css --output=public/css/app.css"
+  },
+  "devDependencies": {
+    "@babel/compat-data": "^7.9.0",
+    "@tailwindcss/forms": "^0.4",
+    "autoprefixer": "^10.3.4",
+    "browser-sync": "^2.26.7",
+    "postcss": "^8.3.6",
+    "postcss-import": "^14.0",
+    "postcss-mixins": "^5.0",
+    "postcss-nested": "^5.0",
+    "sass": "^1.26.10",
+    "tailwindcss": "^3.0"
+  }
+}
