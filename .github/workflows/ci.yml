@@ -1,4 +1,4 @@
-name: glass_profile CI
+name: my_lucky_app CI
 
 on:
   push:

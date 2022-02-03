@@ -1,0 +1,19 @@
+#!/bin/sh
+
+case "${1:-}" in
+  "") # no arguments, start server/worker
+    ;;
+
+  *)
+    echo "Execing ${*}"
+    exec "$@"
+esac
+
+if echo "$DYNO" | grep worker ; then
+  echo "Starting worker"
+  exec /app/bin/worker
+else
+  echo "Starting server"
+  exec /app/bin/server
+fi
+

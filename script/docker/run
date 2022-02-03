@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -euo pipefail
+
+docker run --rm -it --init \
+  -e DATABASE_URL="postgresql://$(whoami)@host.docker.internal/my_lucky_app_development" \
+  -e REDIS_URL=redis://host.docker.internal \
+  -e FORCE_SSL=false \
+  -e APP_DOMAIN=localhost:3001 \
+  -p 3001:3001 \
+  my_lucky_app \
+  $@

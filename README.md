@@ -11,6 +11,7 @@ This is a project template for projects using:
 - User registration/logins/forgot passwords.
 - Admin portal.
 - Admin "sudo" mode, to view or act as a user.
+- `/ping` endpoint, populated at docker build time.
 
 ## Setting up your project
 
@@ -23,3 +24,19 @@ This is a project template for projects using:
 1. Migrate the database: `lucky db.setup`
 1. Run `lucky dev` to start the app.
 1. Visit [http://localhost:3001](http://localhost:3001)
+
+## Deploying
+
+There are utility scripts provided to aid in building and releasing to heroku:
+
+- `script/docker/build` will build and tag a docker container for release.
+- `script/docker/run` will run the tagged container locally.
+    - `script/docker/run <command>` will boot the container and run the
+      command. For example, `script/docker/run sh` will open a shell into the
+      container.
+    - To run the worker instead of the server export the environment variable `DYNO=worker`.
+- `script/docker/deploy` will:
+    - tag the container for deploy to heroku.
+    - push it to registry.heroku.com.
+    - run `container:release`
+    - and optionally run migrations.

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -evuo pipefail
+
+# This script is used to deploy the docker image to heroku. The project name
+# needs to be changed from /my-lucky-app/ to the heroku project name.
+
+heroku_project_name='my-lucky-app'
+# docker tag my_lucky_app "registry.heroku.com/$heroku_project_name/web"
+# docker push "registry.heroku.com/$heroku_project_name/web"
+
+
+# If your app requires a worker, also enable this stanza.
+#
+# docker tag my_lucky_app registry.heroku.com/$heroku_project_name/worker
+# docker push registry.heroku.com/$heroku_project_name/worker
+
+# heroku container:release web worker
+
+# Automatially try to run migrations after a release.
+# heroku run bin/tasks db.migrate
